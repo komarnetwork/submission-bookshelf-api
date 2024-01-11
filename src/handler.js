@@ -82,9 +82,7 @@ const getAllBooksHandler = (request, h) => {
   // Filter berdasarkan nama (case insensitive)
   if (query.name) {
     const searchName = query.name.toLowerCase();
-    filteredBooks = filteredBooks.filter((book) =>
-      book.name.toLowerCase().includes(searchName),
-    );
+    filteredBooks = filteredBooks.filter((book) => book.name.toLowerCase().includes(searchName));
   }
 
   // Filter berdasarkan status reading
