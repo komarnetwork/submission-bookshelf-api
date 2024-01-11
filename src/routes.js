@@ -16,20 +16,20 @@ const routes = [
   {
     method: 'GET',
     path: '/books',
-    handler: (request, h) => {
-      return 'Page Get All Books';
-    },
+    handler: getAllBooksHandler,
   },
   {
     method: 'GET',
     path: '/books/{id}',
-    handler: getAllBooksHandler,
+    handler: getBookByIdHandler,
   },
 
   {
     method: 'PUT',
     path: '/books/{id}',
-    handler: getBookByIdHandler,
+    handler: (request, h) => {
+      return 'Page Update Book';
+    },
   },
 
   {
