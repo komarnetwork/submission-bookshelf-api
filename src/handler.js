@@ -74,4 +74,47 @@ const addBookHandler = (request, h) => {
   return response;
 };
 
-module.exports = { addBookHandler };
+const getAllBooksHandler = (request, h) => {
+  const { query } = request;
+
+  let filteredBooks = [...books];
+
+  // Filter berdasarkan nama (case insensitive)
+  if (query.name) {
+    const searchName = query.name.toLowerCase();
+    filteredBooks = filteredBooks.filter((book) =>
+      book.name.toLowerCase().includes(searchName),
+    );
+  }
+
+  // Filter berdasarkan status reading
+  if (query.reading === '0' || query.reading === '1') {
+    const readingValue = query.reading === '1';
+    filteredBooks = filteredBooks.filter(
+      (book) => book.reading === readingValue,
+    );
+  }
+
+  // Filter berdasarkan status finished
+  if (query.finished === '0' || query.finished === '1') {
+    const finishedValue = query.finished === '1';
+    filteredBooks = filteredBooks.filter(
+      (book) => book.finished === finishedValue,
+    );
+  }
+
+  const response = {
+    status: 'success',
+    data: {
+      books: filteredBooks.map((book) => ({
+        id: book.id,
+        name: book.name,
+        publisher: book.publisher,
+      })),
+    },
+  };
+
+  return h.response(response).code(200);
+};
+
+module.exports = { addBookHandler, getAllBooksHandler };
