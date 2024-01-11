@@ -23,9 +23,7 @@ const routes = [
   {
     method: 'GET',
     path: '/books/{id}',
-    handler: (request, h) => {
-      return 'Page View Book';
-    },
+    handler: getAllBooksHandler,
   },
 
   {
