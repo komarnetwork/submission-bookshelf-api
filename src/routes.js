@@ -33,9 +33,7 @@ const routes = [
   {
     method: 'DELETE',
     path: '/books/{id}',
-    handler: (request, h) => {
-      return 'Page Delete Book';
-    },
+    handler: deleteBookByIdHandler,
   },
 ];
 
