@@ -2,7 +2,7 @@
 
 Submission Bookshelf API - Kelas Belajar Membuat Aplikasi Back-End untuk Pemula - Dicoding Indonesia
 
-🗒️ [Sertifikat Kompetensi Kelas Belajar Membuat Aplikasi Back-End untuk Pemula.pdf](#) [^1]
+🗒️ [Sertifikat Kompetensi Kelas Belajar Membuat Aplikasi Back-End untuk Pemula.pdf](https://www.dicoding.com/certificates/JLX127ODNZ72) [^1]
 
 ## 📚 Deskripsi Kelas
 
@@ -32,7 +32,6 @@ Evaluasi pembelajaran:
 
 Total jam yang dibutuhkan untuk menyelesaikan kelas ini, mulai dari persiapan kelas sampai evaluasi belajar, adalah **45** jam.
 
-[^1]: [Show Credential](#)
 
 ## Bookshelf API Output
 
